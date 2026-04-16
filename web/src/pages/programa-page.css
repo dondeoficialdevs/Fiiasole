@@ -1,0 +1,412 @@
+/* Ficha de programa */
+.programa-detail-page {
+  max-width: var(--layout-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5rem 1.25rem 3.5rem;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .programa-detail-page {
+    padding: 3rem 1.5rem 4rem;
+  }
+}
+
+.programa-detail-kicker {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.programa-detail-title {
+  margin: 0.5rem 0 0;
+  font-family: var(--heading);
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text-h);
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .programa-detail-title {
+    font-size: 2rem;
+  }
+}
+
+.programa-detail-intro {
+  margin: 1rem 0 0;
+  max-width: 40rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.programa-detail-hero {
+  margin-top: 1rem;
+}
+
+.programa-detail-stories {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.programa-detail-stories__title {
+  margin: 0 0 0.25rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-h);
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .programa-detail-stories__title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Tarjetas inclinadas — Programas (inicio y ficha) */
+.programas-tilt {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.35rem;
+  margin-top: 1.75rem;
+  padding: 1.5rem 0 0.5rem;
+}
+
+@media (min-width: 480px) {
+  .programas-tilt {
+    gap: 0.65rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .programas-tilt {
+    gap: 1rem;
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .programas-tilt {
+    gap: 1.35rem;
+  }
+}
+
+.programas-tilt__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 30%;
+  max-width: 200px;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+@media (min-width: 640px) {
+  .programas-tilt__card {
+    max-width: 240px;
+  }
+}
+
+@media (min-width: 900px) {
+  .programas-tilt__card {
+    max-width: 280px;
+  }
+}
+
+.programas-tilt__frame {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 1.65rem;
+  box-shadow:
+    0 20px 40px -12px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+  background: var(--social-bg);
+}
+
+@media (min-width: 768px) {
+  .programas-tilt__frame {
+    border-radius: 2rem;
+  }
+}
+
+.programas-tilt__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.45s ease;
+}
+
+.programas-tilt__card:hover .programas-tilt__img,
+.programas-tilt__card:focus-visible .programas-tilt__img {
+  transform: scale(1.05);
+}
+
+.programas-tilt__card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 0.5rem;
+}
+
+.programas-tilt__label {
+  margin: 0.85rem 0 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+  color: var(--text-h);
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .programas-tilt__label {
+    font-size: 0.875rem;
+  }
+}
+
+/* Inclinación: solo en pantallas medianas+ */
+@media (min-width: 640px) {
+  .programas-tilt__card--left {
+    transform: rotate(-5deg);
+    transform-origin: 50% 80%;
+  }
+
+  .programas-tilt__card--center {
+    z-index: 2;
+    transform: scale(1.06);
+    transform-origin: 50% 80%;
+  }
+
+  .programas-tilt__card--right {
+    transform: rotate(5deg);
+    transform-origin: 50% 80%;
+  }
+
+  .programas-tilt__card--left:hover,
+  .programas-tilt__card--left:focus-visible {
+    transform: rotate(-5deg) translateY(-4px);
+  }
+
+  .programas-tilt__card--center:hover,
+  .programas-tilt__card--center:focus-visible {
+    transform: scale(1.08) translateY(-4px);
+  }
+
+  .programas-tilt__card--right:hover,
+  .programas-tilt__card--right:focus-visible {
+    transform: rotate(5deg) translateY(-4px);
+  }
+}
+
+/* Carrusel con pie de foto */
+.program-story {
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.program-story__stage {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: var(--social-bg);
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.18);
+}
+
+@media (min-width: 640px) {
+  .program-story__stage {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (min-width: 768px) {
+  .program-story__stage {
+    border-radius: 1.5rem;
+  }
+}
+
+.program-story__slide {
+  transition: opacity 0.55s ease;
+}
+
+.program-story__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.program-story__caption-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2.5rem 1rem 1rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.35) 55%,
+    transparent 100%
+  );
+}
+
+.program-story__caption {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  max-width: 42rem;
+}
+
+@media (min-width: 640px) {
+  .program-story__caption-wrap {
+    padding: 3rem 1.5rem 1.25rem;
+  }
+
+  .program-story__caption {
+    font-size: 1rem;
+  }
+}
+
+.program-story__controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.35rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.program-story__btn {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text-h);
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.program-story__btn:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+.program-story__btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.program-story__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.program-story__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 9999px;
+  background: var(--border);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.program-story__dot:hover {
+  background: var(--text);
+  opacity: 0.6;
+}
+
+.program-story__dot--active {
+  background: var(--accent);
+  transform: scale(1.15);
+}
+
+.program-story__dot:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Texto explicativo bajo el carrusel */
+.programa-detail-proyectos {
+  margin-top: 2rem;
+  padding: 1.5rem 1.25rem 1.75rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--border);
+  background: var(--social-bg);
+}
+
+@media (min-width: 640px) {
+  .programa-detail-proyectos {
+    margin-top: 2.25rem;
+    padding: 1.75rem 1.75rem 2rem;
+  }
+}
+
+.programa-detail-proyectos__title {
+  margin: 0 0 1rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-h);
+}
+
+@media (min-width: 640px) {
+  .programa-detail-proyectos__title {
+    font-size: 1.125rem;
+  }
+}
+
+.programa-detail-proyectos__body {
+  margin: 0;
+}
+
+.programa-detail-proyectos__body p {
+  margin: 0 0 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.programa-detail-proyectos__body p:last-child {
+  margin-bottom: 0;
+}
